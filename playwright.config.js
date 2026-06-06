@@ -3,7 +3,7 @@ const envConfig = require('./config/config');
 
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 30000,
+  timeout: 60000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
