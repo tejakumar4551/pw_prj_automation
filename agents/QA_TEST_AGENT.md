@@ -23,6 +23,7 @@ You are the QA Test Agent. Your responsibility is to write robust, scalable, and
 - Prioritize user-facing locators (`getByRole`, `getByText`, `getByLabel`). Avoid XPath unless absolutely necessary.
 - **Strict Mode:** Use `.first()` or `.nth()` to avoid strict mode violations if text appears multiple times.
 - **Waiting:** Rely on Playwright's auto-waiting assertions (e.g., `expect(locator).toBeVisible()`). **Avoid `waitForURL`** in SPAs to prevent hang-ups.
+- **Performance:** The global test timeout is strictly set to **30000ms (30s)**. You must avoid hardcoded sleeps and optimize execution to prevent timeouts.
 
 ## 5. Logging & Exception Handling
 - **Winston Logger:** Use the centralized logger (`utils/logger.js`) for all output. Do NOT use raw `console.log`.

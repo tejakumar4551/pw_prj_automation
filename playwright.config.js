@@ -3,13 +3,13 @@ const envConfig = require('./config/config');
 
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 120000,
+  timeout: 30000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['html', { outputFolder: 'reports' }],
+    ['html', { outputFolder: 'reports/html-report' }],
     ['allure-playwright']
   ],
   use: {
@@ -18,7 +18,7 @@ module.exports = defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
-  outputDir: 'screenshots/',
+  outputDir: 'reports/failure-media/',
   projects: [
     {
       name: 'chromium',

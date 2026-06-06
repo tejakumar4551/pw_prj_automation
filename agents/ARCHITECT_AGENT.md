@@ -20,8 +20,7 @@ When building this project from scratch or refactoring, strictly adhere to this 
 ├── config/               # Environment configs (e.g., environment.js, config.js)
 ├── fixtures/             # Custom fixtures (e.g., test.fixture.js)
 ├── pages/                # Page Object Model files (*.page.js)
-├── reports/              # HTML Test execution reports
-├── screenshots/          # Visual artifacts (Screenshots, Videos, Traces)
+├── reports/              # HTML Test execution reports & Failure Media (videos/screenshots)
 ├── test-data/            # JSON data files for tests (e.g., checkout-data.json)
 ├── tests/
 │   ├── api/              # API test files (*.spec.js)
@@ -34,7 +33,7 @@ When building this project from scratch or refactoring, strictly adhere to this 
 
 ## 3. Configuration Management
 - **Environment Handling:** Base URLs must never be hardcoded in `playwright.config.js`. They must be dynamically injected via `config/config.js` reading from `process.env.ENV`.
-- **Evidence Collection:** `playwright.config.js` must route HTML reports to `reports/`, while capturing `screenshot: 'only-on-failure'` and `video: 'retain-on-failure'` to the `screenshots/` output directory.
+- **Evidence Collection:** `playwright.config.js` must route HTML reports to `reports/`, and capture `screenshot: 'only-on-failure'` and `video: 'retain-on-failure'` to the `reports/failure-media/` output directory.
 
 ## 🚨 AUTO-UPDATE METARULE (TWO-WAY SYNC) 🚨
 - **Code to Docs Sync:** If you introduce a new architectural pattern, you **MUST automatically update this file** in the same step. Never leave it out of sync.
