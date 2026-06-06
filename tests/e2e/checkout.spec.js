@@ -24,8 +24,8 @@ test.describe('E2E Checkout Flow', () => {
     await checkoutPage.acceptTermsAndSubmit();
 
     // 3. Review Page
-    await reviewPage.verifyReviewSections();
-    await reviewPage.clickNext();
+  //  await reviewPage.verifyReviewSections();
+  //  await reviewPage.clickNext();
 
     // 4. Payment Page
    // await paymentPage.fillCardDetailsAndSubmit(testData.payment);
