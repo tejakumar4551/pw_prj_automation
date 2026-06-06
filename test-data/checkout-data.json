@@ -1,0 +1,28 @@
+{
+  "order": {
+    "amount": "199",
+    "currencyCode": "USD",
+    "deliveryMethod": "Click & Collect",
+    "storeSearchQuery": "Luton UK",
+    "collectionDate": "09/06/2026"
+  },
+  "user": {
+    "email": "tejakumar.gundelugunta@gmail.com",
+    "phone": "442071234567",
+    "firstName": "tester",
+    "lastName": "developer",
+    "dob": {
+      "day": "25",
+      "month": "01",
+      "year": "1995"
+    },
+    "addressQuery": "ig3 8er",
+    "addressSelection": "IG3 8ER"
+  },
+  "payment": {
+    "cardNumber": "4819000000000110",
+    "expiryMonth": "08",
+    "expiryYear": "2028",
+    "cvv": "242"
+  }
+}
